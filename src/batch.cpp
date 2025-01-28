@@ -1,4 +1,4 @@
-#include"batch.h"
+#include"../include/batch.h"
 Batch::Batch(){
     //std::cout<<"Default constructor called"<<std::endl;
     batch_size = 0;

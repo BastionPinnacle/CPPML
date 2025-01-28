@@ -1,4 +1,4 @@
-#include"function.h"
+#include"../include/function.h"
 Function::Function(){}
 
 Softmax::Softmax(){};

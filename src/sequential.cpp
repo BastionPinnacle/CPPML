@@ -1,5 +1,5 @@
-#include"sequential.h"
-#include"linear.h"
+#include"../include/sequential.h"
+#include"../include/linear.h"
 
 Sequential::Sequential(){}
 
