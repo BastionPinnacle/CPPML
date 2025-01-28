@@ -6,4 +6,8 @@ add_library(compiler_flags INTERFACE)
 
 target_compile_features(compiler_flags INTERFACE cxx_std_11)
 
-include_directories(src)
+add_subdirectory(src)
+
+add_executable(main main.cpp)
+
+target_link_libraries(main PRIVATE cppml)

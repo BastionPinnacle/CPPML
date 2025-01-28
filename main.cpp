@@ -1,11 +1,10 @@
-#include"include/batch.h"
-#include"include/loss.h"
-#include"include/module.h"
-#include"include/function.h"
-#include"include/linear.h"
-#include"include/sequential.h"
+#include"batch.h"
+#include"loss.h"
+#include"module.h"
+#include"function.h"
+#include"linear.h"
+#include"sequential.h"
 #include<tuple>
-#include<iomanip>
 
 
 double accuracy(Batch& prediction, Batch& target){
