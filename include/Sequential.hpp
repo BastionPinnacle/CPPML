@@ -1,7 +1,6 @@
-#ifndef SEQUENTIAL
-#define SEQUENTIAL
-#include"batch.h"
-#include"module.h"
+#pragma once
+#include"Batch.hpp"
+#include"Module.hpp"
 
 class Sequential{
     public:
@@ -13,4 +12,3 @@ class Sequential{
     private:
         std::vector<Module*> sequence;
 };
-#endif

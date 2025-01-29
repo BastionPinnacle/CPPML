@@ -1,5 +1,4 @@
-#ifndef BATCH
-#define BATCH
+#pragma once
 #include<vector>
 #include<iostream>
 class Batch{
@@ -10,7 +9,7 @@ class Batch{
         Batch& operator=(Batch&& oldBatch);
         Batch& operator=(Batch& oldBatch);
         std::vector<double>& operator[](int i);
-        uint size();
+        std::size_t size();
         std::vector<std::vector<double>>::iterator begin();
         std::vector<std::vector<double>>::iterator end();
         void push_back(std::vector<double> v);
@@ -19,4 +18,3 @@ class Batch{
         uint batch_size;
         std::vector<std::vector<double>> batch;
 };
-#endif

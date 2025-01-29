@@ -1,6 +1,5 @@
-#ifndef FUNCTION
-#define FUNCTION
-#include"module.h"
+#pragma once
+#include"Module.hpp"
 class Function : public Module {
     public: 
         Function();
@@ -36,4 +35,3 @@ class ReLU: public Function{
         double a;
         Batch relu;
 };
-#endif

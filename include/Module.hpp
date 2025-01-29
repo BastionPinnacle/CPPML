@@ -1,6 +1,5 @@
-#ifndef MODULE
-#define MODULE
-#include"batch.h"
+#pragma once
+#include"Batch.hpp"
 #include<algorithm>
 #include<cmath>
 class Module{
@@ -12,4 +11,3 @@ class Module{
         virtual void info();
         virtual ~Module();
 };
-#endif

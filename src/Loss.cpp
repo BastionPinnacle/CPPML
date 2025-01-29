@@ -1,4 +1,4 @@
-#include"batch.h"
+#include"Loss.hpp"
 #include<cmath>
 Batch d_L2_Loss (Batch& prediction, Batch& target){
     Batch newBatch;
