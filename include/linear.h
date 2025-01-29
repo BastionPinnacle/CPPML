@@ -1,11 +1,6 @@
-#ifndef LINEAR
-#define LINEAR
+#pragma once
 #include<random>
 #include"module.h"
-extern std::normal_distribution<double> normal_00_10;
-extern std::uniform_real_distribution<double> uniform_neg100_100;
-static std::default_random_engine generator;
-
 template<int N, int M>
 class Linear : public Module{
     public:
@@ -23,13 +18,15 @@ class Linear : public Module{
         double d_biases[N];
         double weights[N][M];
         double biases[N];
+        std::default_random_engine generator;
 };
 
 template<int N, int M>
 Linear<N,M>::Linear(){
+    std::normal_distribution<double> normal_distribution;
     for(uint i = 0 ; i < N;i++){
-        for(uint j = 0 ; j < M ; j++) weights[i][j] = normal_00_10(generator);
-        biases[i] = normal_00_10(generator);
+        for(uint j = 0 ; j < M ; j++) weights[i][j] = normal_distribution(Linear<N,M>::generator);
+        biases[i] = normal_distribution(generator);
     }
     x_batch;
 }
@@ -117,4 +114,3 @@ void Linear<N,M>::info(){
     std::cout<<"You're interacting with object of class 'Linear'"<<std::endl;
     this->print();
 }
-#endif

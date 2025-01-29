@@ -1,5 +1,4 @@
-#ifndef SEQUENTIAL
-#define SEQUENTIAL
+#pragma once
 #include"batch.h"
 #include"module.h"
 
@@ -13,4 +12,3 @@ class Sequential{
     private:
         std::vector<Module*> sequence;
 };
-#endif

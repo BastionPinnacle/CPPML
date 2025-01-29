@@ -1,5 +1,4 @@
-#ifndef FUNCTION
-#define FUNCTION
+#pragma once
 #include"module.h"
 class Function : public Module {
     public: 
@@ -36,4 +35,3 @@ class ReLU: public Function{
         double a;
         Batch relu;
 };
-#endif

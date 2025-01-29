@@ -1,11 +1,13 @@
-#include"batch.h"
-#include"loss.h"
-#include"module.h"
-#include"function.h"
-#include"linear.h"
-#include"sequential.h"
+#include"include/batch.h"
+#include"include/loss.h"
+#include"include/module.h"
+#include"include/function.h"
+#include"include/linear.h"
+#include"include/sequential.h"
 #include<tuple>
+#include<random>
 
+static std::default_random_engine generator;
 
 double accuracy(Batch& prediction, Batch& target){
     uint size = std::min(prediction.size(),prediction.size());
@@ -13,9 +15,9 @@ double accuracy(Batch& prediction, Batch& target){
     for(uint i = 0 ;  i < size ; i++){
         std::vector<double> p = prediction[i];
         std::vector<double> t = target[i];
-        std::vector<double>::iterator result_p = max_element(p.begin(), p.end());
+        std::vector<double>::iterator result_p = std::max_element(p.begin(), p.end());
         int argmaxVal_p = distance(p.begin(), result_p);
-        std::vector<double>::iterator result_t = max_element(t.begin(), t.end());
+        std::vector<double>::iterator result_t = std::max_element(t.begin(), t.end());
         int argmaxVal_t = distance(t.begin(), result_t);
         if(argmaxVal_p==argmaxVal_t) correct++;
     }
@@ -25,11 +27,12 @@ double accuracy(Batch& prediction, Batch& target){
 std::tuple<Batch,Batch> generate_linear(uint batch_size, std::vector<double> a, double b){
     Batch x_batch;
     Batch y_batch;
+    std::uniform_real_distribution<double> real_distribution;
     for(uint i = 0 ; i < batch_size ; i++){
         std::vector<double> x(a.size(),0.0);
         std::vector<double> y(1,0.0);
         for(uint j = 0 ; j < a.size(); j++){
-            x[j] = uniform_neg100_100(generator);
+            x[j] = real_distribution(generator);
             y[0] += a[j]*x[j];
         }
         y[0]+=b;
