@@ -1,5 +1,5 @@
-add_library(cppml batch.cpp function.cpp loss.cpp module.cpp sequential.cpp)
+add_library(cppml Batch.cpp Function.cpp Loss.cpp Module.cpp Sequential.cpp)
 
 target_link_libraries(cppml PRIVATE compiler_flags)
 
-target_include_directories(cppml PUBLIC ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(cppml PRIVATE "${CMAKE_SOURCE_DIR}/include")

@@ -1,4 +1,5 @@
-#include"../include/batch.h"
+#include"Batch.hpp"
+
 Batch::Batch(){
     //std::cout<<"Default constructor called"<<std::endl;
     batch_size = 0;
@@ -28,7 +29,7 @@ Batch& Batch::operator=(Batch& oldBatch){
 std::vector<double>& Batch::operator[](int i){
     return batch[i];
 }
-uint Batch::size(){
+std::size_t Batch::size(){
     return batch_size;
 }
 std::vector<std::vector<double>>::iterator  Batch::begin() { return batch.begin(); }

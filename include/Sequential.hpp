@@ -1,6 +1,6 @@
 #pragma once
-#include"batch.h"
-#include"module.h"
+#include"Batch.hpp"
+#include"Module.hpp"
 
 class Sequential{
     public:

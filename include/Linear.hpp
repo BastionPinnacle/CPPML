@@ -1,6 +1,6 @@
 #pragma once
 #include<random>
-#include"module.h"
+#include"Module.hpp"
 template<int N, int M>
 class Linear : public Module{
     public:

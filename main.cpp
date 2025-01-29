@@ -1,9 +1,9 @@
-#include"include/batch.h"
-#include"include/loss.h"
-#include"include/module.h"
-#include"include/function.h"
-#include"include/linear.h"
-#include"include/sequential.h"
+#include"include/Batch.hpp"
+#include"include/Loss.hpp"
+#include"include/Module.hpp"
+#include"include/Function.hpp"
+#include"include/Linear.hpp"
+#include"include/Sequential.hpp"
 #include<tuple>
 #include<random>
 

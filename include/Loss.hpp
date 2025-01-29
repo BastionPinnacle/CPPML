@@ -1,5 +1,5 @@
 #pragma once
-#include"batch.h"
+#include"Batch.hpp"
 Batch d_L2_Loss (Batch& prediciton, Batch& target);
 double L2_Loss (Batch& prediciton, Batch& target);
 Batch d_Log_Loss (Batch& prediction, Batch& target);
